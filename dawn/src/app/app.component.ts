@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LoginComponent } from './login/login.component';
+import { DialogService } from 'ng2-bootstrap-modal';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private dialogService:DialogService) {
+
+  }
+
+  //method to be called to click on login link
+  onLoginClick() {
+    this.dialogService.addDialog(LoginComponent);
+  }
 }

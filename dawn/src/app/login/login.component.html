@@ -1,0 +1,54 @@
+<div class="modal-dialog loginDiv">
+  <div class="modal-content loginForm">
+    <div class="nike-logo">
+      <img src="../../assets/images/swoosh_plus_black.png" alt="Nike Logo">
+    </div>
+    <div class="nike-header dawn-margin">
+      YOUR ACCOUNT FOR EVERYTHING NIKE
+    </div>
+    <form (ngSubmit)="onLogin(loginCredentails, loginForm)" #loginForm="ngForm">
+      <div class="form-group">
+        <input #emailId="ngModel" type="email" class="form-control" id="emailId" name="emailId" placeholder="Email" [(ngModel)]="loginCredentails.emailId">
+        <div class="err-msg" *ngIf="(emailId.touched && !emailId.valid)">
+          Enter a valid email address
+        </div>
+      </div>
+      <div class="form-group">
+        <input #password="ngModel" type="password" class="form-control" id="pwd" name="pwd" placeholder="Password" [(ngModel)]="loginCredentails.password">
+        <div class="err-msg" *ngIf="(password.touched && !password.valid)">
+          Enter a password
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 checkbox pull-left keep-logged-in">
+          <label><input type="checkbox" value="">Keep me logged in</label>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 forgot-password">
+          Forgot Password?
+        </div>
+      </div>
+      <div class="row login-policy dawn-margin">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          By logging in, you agree to Nike's <span>Privacy Policy</span> and <span>Terms of Use</span>
+        </div>
+      </div>
+      <div class="row dawn-margin">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <button class="btn btn-default login-btn" type="submit">LOG IN</button>
+        </div>
+      </div>
+      <div class="row dawn-margin">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <button class="btn btn-default fb-login-btn" type="submit">
+            <!-- <img src="../../assets/images/social_facebook_box_blue.png" alt="Facebook Logo" width="30">-->
+            LOG IN WITH FACEBOOK</button>
+        </div>
+      </div>
+      <div class="row dawn-margin register">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+          Not a member? <span (click)="onSignupClick();">Join Now</span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+@import '../../styles/fonts.less';
+@import '../../styles/colors.less';
+.loginDiv {
+    display: block;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    .loginForm {
+        display: block;
+        width: 35%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 4%;
+        .dawn-margin {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .nike-logo {
+            text-align: center;
+        }
+        .nike-header {
+            font-size: @dawn-font-size-header;
+            font-weight: @dawn-font-wt-bold;
+            text-align: center;
+        }
+        .forgot-password {
+            margin: 10px 0;
+            cursor: pointer;
+            text-align: right;
+        }
+        .login-policy span, .register span {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .keep-logged-in,
+        .login-policy,
+        .forgot-password,
+        .register {
+            color: #8D8D8D;
+            font-size: @dawn-font-size-small;
+        }
+        .login-btn, .fb-login-btn {
+            width: 100%;
+            color: @white;
+            font-weight: @dawn-font-wt-bold;
+            padding: 12px 0;
+        }
+        .login-btn {
+            background-color: @black;
+        }
+        .fb-login-btn {
+            background-color: #3b5998;
+        }
+        .register span {
+            color: @black;
+         }
+
+    }
+}
